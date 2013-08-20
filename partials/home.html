@@ -1,0 +1,47 @@
+<div class="content">
+	<a href="#!/" class="right closeFrame">&nbsp;</a>
+
+	<div class="left" style="width: 310px;">
+		<h1>Biography</h1>
+		<img src="img/bio_2.jpg" class="framed nomargin">
+		<p>Black Dog Blues Band was born in Sao Paulo (Brazil) in 1989. Its founder,
+			Daniel Henriques, met Magic Slim, Albert Collins, Buddy Guy, Etta James,
+			Koko Taylor, Junior Wells, among...<p>
+		<a class="right dog_button" href="#!/bio">Read More</a>
+	</div>
+
+	<div class="right" style="width: 300px;">
+		<h1>Next Dates</h1>
+		<div id="eventList">
+			<span ng-show="!evLoaded"><b>LOADING...</b></span>
+			<div class="event" ng-repeat="event in events">
+				<div class="date left">
+					<div class="day">{{event.start|day}}</div>
+					<div class="month">{{event.start|month}}</div>
+				</div>
+				<div class="title">{{event.title}}</div>
+				<div class="text">{{event.details}}</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<a class="right dog_button" href="#!/dates">More Dates</a>
+	</div>
+	<div class="clear"></div>
+
+	<h1>Latest Photos <img src="img/social/flickr-dot.png"></h1>
+	<span ng-show="!phLoaded"><b>LOADING...</b></span>
+	<ul id="flickrGallery">
+		<li ng-repeat="photo in photos">
+			<a class="flickr-item" href="{{photo.link}}" target="_blank" title="{{photo.title}}">
+				<img src="{{photo.media.m}}" alt="{{photo.title}}"/>
+			</a>
+		</li>
+	</ul>
+	<div class="clear"></div>
+
+	<a class="right dog_button" href="#!/media">More Media</a>
+	<div class="clear"></div>
+
+	<!-- p>http://findicons.com/icon/267468/youtube?width=24<br/>
+	http://demo.html5xcss3.com/demo.php?cat=html5themes&host=templatesmonster&temp=thomsander</p -->
+</div>

@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /blackdog/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !index
+#RewriteCond %{REQUEST_URI} !^(/index\.php|/img|/js|/css|/robots\.txt|/favicon\.ico)
+RewriteRule (.*) index.html [L]

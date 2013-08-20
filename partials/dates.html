@@ -1,0 +1,17 @@
+<div class="content">
+	<a href="#!/" class="right closeFrame">&nbsp;</a>
+
+	<h1>Tour Dates</h1>
+	<div id="eventList">
+		<span ng-show="!evLoaded"><b>LOADING...</b></span>
+		<div class="event" ng-repeat="event in events">
+			<div class="date left">
+				<div class="day">{{event.start|day}}</div>
+				<div class="month">{{event.start|month}}</div>
+			</div>
+			<div class="title">{{event.title}}</div>
+			<div class="text">{{event.details}}</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
