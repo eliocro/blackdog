@@ -1,0 +1,500 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../scss/modules/_layout.scss */
+body {
+  margin: 30px 0 0 0;
+  color: #fff;
+  font: 13px normal Arial, Helvetica, sans-serif;
+  background: url("/blackdog/img/back1.jpg") center top no-repeat #0d0d0d;
+  background-size: 100%;
+}
+
+/* line 9, ../scss/modules/_layout.scss */
+.left {
+  float: left;
+}
+
+/* line 10, ../scss/modules/_layout.scss */
+.right {
+  float: right;
+}
+
+/* line 11, ../scss/modules/_layout.scss */
+.clear {
+  clear: both;
+}
+
+/* line 12, ../scss/modules/_layout.scss */
+.red {
+  color: #FF0000;
+}
+
+/* line 16, ../scss/modules/_layout.scss */
+a {
+  text-decoration: underline;
+  color: #ccc;
+}
+
+/* line 20, ../scss/modules/_layout.scss */
+a:hover {
+  color: #aaa;
+}
+
+/* line 24, ../scss/modules/_layout.scss */
+img {
+  border: 0;
+}
+
+/* line 27, ../scss/modules/_layout.scss */
+.wrapper {
+  width: 1000px;
+  margin: 0 auto 0;
+}
+
+/************** TITLE **************/
+/* line 33, ../scss/modules/_layout.scss */
+#sidebar {
+  position: relative;
+  width: 270px;
+}
+
+/* line 38, ../scss/modules/_layout.scss */
+#main-logo {
+  position: absolute;
+  z-index: 100;
+  top: 45px;
+  left: -160px;
+  width: 156px;
+  height: 156px;
+}
+
+/* line 47, ../scss/modules/_layout.scss */
+#main-title {
+  margin: 45px 0 210px;
+  width: 173px;
+  height: 156px;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+/*
+* Footer
+*/
+/* line 62, ../scss/modules/_layout.scss */
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #aaa;
+  font-size: 11px;
+  text-transform: uppercase;
+  background: #0d0d0d;
+}
+
+/* line 73, ../scss/modules/_layout.scss */
+#footer .social {
+  width: 270px;
+  padding: 6px 0 2px;
+  text-align: left;
+}
+
+/* line 78, ../scss/modules/_layout.scss */
+#footer .social img {
+  margin: 0px 2px;
+}
+
+/* line 81, ../scss/modules/_layout.scss */
+#footer .copy {
+  width: 450px;
+  padding: 12px 0 8px;
+  text-align: right;
+}
+
+/* line 86, ../scss/modules/_layout.scss */
+#footer a {
+  color: #aaa;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* line 91, ../scss/modules/_layout.scss */
+#footer a:hover {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+/* line 97, ../scss/modules/_layout.scss */
+ul.backchoice {
+  margin: 0 0 0 10px;
+  padding: 6px 0 0;
+  width: 200px;
+  display: none;
+}
+
+/* line 103, ../scss/modules/_layout.scss */
+ul.backchoice li {
+  list-style: none;
+  float: left;
+  width: 20px;
+  background: #ddd;
+  color: #000;
+  margin: 0 3px 0 0;
+  padding: 4px 1px 3px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 116, ../scss/modules/_layout.scss */
+ul.backchoice li.active, ul.backchoice li:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* line 1, ../scss/modules/_menu.scss */
+#main-menu {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../scss/modules/_menu.scss */
+#main-menu li {
+  float: left;
+  list-style: none;
+}
+
+/* line 9, ../scss/modules/_menu.scss */
+#main-menu li a {
+  display: block;
+  float: left;
+  color: #f0f0f0;
+  background: #000;
+  padding: 12px 80px 12px 40px;
+  font-size: 19px;
+  font-weight: 800;
+  margin: 5px 0 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* line 22, ../scss/modules/_menu.scss */
+#main-menu li a:hover, #main-menu li a.active {
+  color: #333;
+  background: #fff;
+}
+
+/* line 2, ../scss/modules/_content.scss */
+#main-content {
+  width: 720px;
+  background: url("shadow.png") 0 0 repeat;
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0 0 10px;
+  /*display: none;*/
+}
+
+/* line 10, ../scss/modules/_content.scss */
+#main-content .content {
+  padding: 30px;
+}
+
+/* line 14, ../scss/modules/_content.scss */
+#main-content .closeFrame {
+  display: block;
+  width: 19px;
+  height: 19px;
+  background: url("close.png") 0 0px no-repeat;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0;
+}
+
+/* line 23, ../scss/modules/_content.scss */
+#main-content .closeFrame:hover {
+  background: url("close.png") 0 -19px no-repeat;
+}
+
+/* line 26, ../scss/modules/_content.scss */
+#main-content .closeFrame:active {
+  background: url("close.png") 0 0px no-repeat;
+}
+
+/* line 30, ../scss/modules/_content.scss */
+#main-content h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+/* line 36, ../scss/modules/_content.scss */
+#main-content img.framed {
+  border: 6px solid #fff;
+  margin: 0px 10px 10px;
+}
+
+/* line 40, ../scss/modules/_content.scss */
+#main-content img.framed.nomargin {
+  margin: 0px 0px 10px;
+}
+
+/* line 45, ../scss/modules/_content.scss */
+a.dog_button {
+  display: block;
+  margin: 10px 0;
+  padding: 5px 10px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* line 57, ../scss/modules/_content.scss */
+a.dog_button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* line 61, ../scss/modules/_content.scss */
+a.dog_button:active {
+  background: #fff;
+  color: #000;
+}
+
+/* line 66, ../scss/modules/_content.scss */
+a.dog_button.biggermargin {
+  margin-top: 20px;
+}
+
+/* line 70, ../scss/modules/_content.scss */
+a.dog_button img {
+  margin-bottom: -3px;
+}
+
+/* line 75, ../scss/modules/_content.scss */
+a.one-sheet {
+  display: block;
+  float: left;
+  text-align: center;
+  margin: 0 30px 0 0;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+/* line 84, ../scss/modules/_content.scss */
+a.one-sheet img {
+  margin-bottom: 5px;
+}
+
+/* line 89, ../scss/modules/_content.scss */
+.event {
+  margin: 10px 0 25px 0;
+}
+
+/* line 92, ../scss/modules/_content.scss */
+.event .date {
+  float: left;
+  width: 44px;
+  padding: 0 20px 10px 0;
+}
+
+/* line 97, ../scss/modules/_content.scss */
+.event .date .day {
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 102, ../scss/modules/_content.scss */
+.event .date .month {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 14px;
+}
+
+/* line 109, ../scss/modules/_content.scss */
+h3, .event .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+}
+
+/* line 115, ../scss/modules/_content.scss */
+h3 {
+  margin-bottom: 10px;
+}
+
+/* line 119, ../scss/modules/_content.scss */
+p, .event .text {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* line 124, ../scss/modules/_content.scss */
+p {
+  margin-bottom: 10px;
+}
+
+/* line 128, ../scss/modules/_content.scss */
+#flickrGallery {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 133, ../scss/modules/_content.scss */
+#flickrGallery li {
+  list-style: none;
+  display: block;
+  float: left;
+  margin: 0 6px 10px;
+  background: #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+/* line 142, ../scss/modules/_content.scss */
+#flickrGallery li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 110px;
+  height: 75px;
+  color: #666;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+/* line 152, ../scss/modules/_content.scss */
+#flickrGallery li img {
+  height: 75px;
+}
+
+/* line 2, ../scss/modules/_contact.scss */
+#contactForm {
+  font-size: 14px;
+  color: #ccc;
+}
+/* line 6, ../scss/modules/_contact.scss */
+#contactForm input[type="text"], #contactForm input[type="email"] {
+  padding: 5px;
+  margin: 5px 0 10px;
+  width: 200px;
+  font-size: 14px;
+  border: 0;
+  border-radius: 2px;
+  background: #f0f0f0;
+}
+/* line 15, ../scss/modules/_contact.scss */
+#contactForm textarea {
+  padding: 5px;
+  margin: 3px 0 10px;
+  width: 350px;
+  height: 90px;
+  font-size: 14px;
+  border: 0;
+  border-radius: 2px;
+  background: #f0f0f0;
+}
+/* line 25, ../scss/modules/_contact.scss */
+#contactForm input[type="submit"] {
+  margin: 10px 0 0;
+  padding: 5px 10px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  border: 0;
+}
+/* line 37, ../scss/modules/_contact.scss */
+#contactForm input[type="submit"]:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* line 42, ../scss/modules/_contact.scss */
+#cf_sending {
+  display: none;
+  font-weight: bold;
+  margin: 10px 0 0;
+}

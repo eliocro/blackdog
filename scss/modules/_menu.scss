@@ -1,0 +1,25 @@
+#main-menu {
+  margin: 0;
+  padding: 0;
+}
+#main-menu li {
+  float: left;
+  list-style: none;
+}
+#main-menu li a {
+  display: block;
+  float: left;
+  color: #f0f0f0;
+  background: #000;
+  padding: 12px 80px 12px 40px;
+  font-size: 19px;
+  font-weight: 800;
+  margin: 5px 0 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#main-menu li a:hover, #main-menu li a.active {
+  color: #333;
+  background: #fff;
+}

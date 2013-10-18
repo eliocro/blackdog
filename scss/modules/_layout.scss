@@ -1,0 +1,119 @@
+body {
+  margin: 30px 0 0 0;
+  color: #fff;
+  font: 13px normal Arial, Helvetica, sans-serif;
+  background: url("/blackdog/img/back1.jpg") center top no-repeat #0d0d0d;
+  background-size: 100%;
+
+}
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+.red {
+  color: #FF0000;
+}
+
+a {
+  text-decoration: underline;
+  color: #ccc;
+}
+a:hover {
+  color: #aaa;
+}
+
+img {
+  border: 0;
+}
+.wrapper {
+  width:  1000px;
+  margin: 0 auto 0;
+}
+
+/************** TITLE **************/
+#sidebar {
+  position: relative;
+  width: 270px;
+}
+
+#main-logo {
+  position:absolute;
+  z-index: 100;
+  top: 45px;
+  left: -160px;
+  width: 156px;
+  height: 156px;
+}
+
+#main-title {
+  margin: 45px 0 210px;
+  width: 173px;
+  height: 156px;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+
+/*
+* Footer
+*/
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #aaa;
+  font-size: 11px;
+  text-transform: uppercase;
+  background: #0d0d0d;
+}
+#footer .social {
+  width: 270px;
+  padding: 6px 0 2px;
+  text-align: left;
+}
+#footer .social img {
+  margin: 0px 2px;
+}
+#footer .copy {
+  width: 450px;
+  padding: 12px 0 8px;
+  text-align: right;
+}
+#footer a {
+  color: #aaa;
+  font-weight: bold;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+
+ul.backchoice {
+  margin: 0 0 0 10px;
+  padding: 6px 0 0;
+  width: 200px;
+  display: none;
+}
+ul.backchoice li {
+  list-style: none;
+  float: left;
+  width: 20px;
+  background: #ddd;
+  color: #000;
+  margin: 0 3px 0 0;
+  padding: 4px 1px 3px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+ul.backchoice li.active, ul.backchoice li:hover {
+  background: #000;
+  color: #fff;
+}
