@@ -1,0 +1,93 @@
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  // border: 1px solid red;
+
+  padding: 0;
+  margin: 0;
+  color: #aaa;
+  font-size: 13px;
+  text-transform: uppercase;
+
+  .social {
+    padding: 10px 10px 0;
+    text-align: center;
+    img {
+      margin: 0px 2px;
+    }
+  }
+  .copy {
+    padding: 8px;
+    text-align: center;
+    span {
+      display: block;
+    }
+    a {
+      color: #aaa;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        color: #aaa;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@media (min-width: 481px) {
+  footer {
+    .social {
+      float: left;
+      text-align: left;
+    }
+    .copy {
+      float: right;
+      text-align: right;
+    }
+  }
+}
+@media (min-width: 769px) {
+  footer {
+    .social {
+      padding: 7px;
+    }
+    .copy {
+      padding: 12px 10px;
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}
+@media (min-width: 961px) {
+  footer .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+ul.backchoice {
+  margin: 0 0 0 10px;
+  padding: 6px 0 0;
+  width: 200px;
+  display: none;
+}
+ul.backchoice li {
+  list-style: none;
+  float: left;
+  width: 20px;
+  background: #ddd;
+  color: #000;
+  margin: 0 3px 0 0;
+  padding: 4px 1px 3px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+ul.backchoice li.active, ul.backchoice li:hover {
+  background: #000;
+  color: #fff;
+}

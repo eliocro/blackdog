@@ -5,8 +5,12 @@
 
 @import "compass/reset";
 
-
+@import "modules/base";
 @import "modules/layout";
+
 @import "modules/menu";
 @import "modules/content";
+@import "modules/ui-elements";
+
 @import "modules/contact";
+@import "modules/footer";

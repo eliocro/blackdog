@@ -1,0 +1,120 @@
+
+.btn-navbar {
+  position: absolute;
+  z-index: 100px;
+  top: 30px;
+  right: 30px;
+  display: block;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgb(14, 14, 14) linear-gradient(rgb(21, 21, 21),
+    rgb(4, 4, 4)) repeat-x scroll 0% 0% / auto padding-box border-box;
+  box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px 0px inset,
+    rgba(255, 255, 255, 0.0745098) 0px 1px 0px 0px;
+  outline: rgb(255, 255, 255) none 0px;
+
+  &:hover {
+    background: #222;
+  }
+  span {
+    display: block;
+    margin: 8px 6px 8px;
+    height: 6px;
+    background: #999;
+    border-radius: 3px;
+  }
+}
+@media (min-width: 481px) {
+  .btn-navbar {
+    display: none;
+  }
+}
+
+.closeFrame {
+  position: absolute;
+  display: block;
+  right: 15px;
+  top: 15px;
+  width: 19px;
+  height: 19px;
+  background: url('/img/close.png') 0 0px no-repeat;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    background: url('/img/close.png') 0 -19px no-repeat;
+  }
+  &:active {
+    background: url('/img/close.png') 0 0px no-repeat;
+  }
+}
+
+.dog_button {
+  clear: both;
+  display: block;
+  margin: 10px 0 15px;
+  padding: 5px 10px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  img {
+    margin-bottom: -3px;
+  }
+  &:hover {
+    background: #000;
+    color: #fff;
+  }
+  &:active {
+    background: #fff;
+    color: #000;
+  }
+  &.biggermargin {
+    margin-top: 20px;
+  }
+}
+
+.one-sheet {
+  display: block;
+  float: left;
+  text-align: center;
+  margin: 0 30px 0 0;
+  font-size: 11px;
+  text-decoration: none;
+  img {
+    margin-bottom: 5px;
+  }
+}
+
+#flickrGallery {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  li {
+    list-style: none;
+    display: block;
+    float: left;
+    margin: 0 6px 10px;
+    background: #fff;
+    padding: 5px;
+    text-align: center;
+    a {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      width: 110px;
+      height: 75px;
+      color: #666;
+      text-decoration: none;
+      font-size: 11px;
+    }
+    img {
+      height: 75px;
+    }
+  }
+}
