@@ -127,20 +127,21 @@ body {
 @media (min-width: 961px) {
   /* line 8, ../scss/modules/_layout.scss */
   body {
-    background: url("/img/back1.jpg") center top no-repeat black;
+    background: url("/img/back1.jpg") center top no-repeat #0d0d0d;
+    background-size: 100%;
   }
 }
 /*
 *  main container wrapper
 */
-/* line 16, ../scss/modules/_layout.scss */
+/* line 17, ../scss/modules/_layout.scss */
 .wrapper {
   width: 100%;
   margin: 0 auto;
 }
 
 @media (min-width: 961px) {
-  /* line 21, ../scss/modules/_layout.scss */
+  /* line 22, ../scss/modules/_layout.scss */
   .wrapper {
     width: 960px;
   }
@@ -148,19 +149,19 @@ body {
 /*
 * Logo and title
 */
-/* line 29, ../scss/modules/_layout.scss */
+/* line 30, ../scss/modules/_layout.scss */
 header {
   position: relative;
   height: 110px;
 }
-/* line 33, ../scss/modules/_layout.scss */
+/* line 34, ../scss/modules/_layout.scss */
 header #main-logo {
   float: left;
   margin: 5px 0 0 10px;
   width: 100px;
   height: 100px;
 }
-/* line 39, ../scss/modules/_layout.scss */
+/* line 40, ../scss/modules/_layout.scss */
 header #main-title {
   float: left;
   margin: 20px 0 0 10px;
@@ -173,18 +174,18 @@ header #main-title {
 }
 
 @media (min-width: 961px) {
-  /* line 52, ../scss/modules/_layout.scss */
+  /* line 53, ../scss/modules/_layout.scss */
   header {
     position: absolute;
     z-index: 100;
   }
-  /* line 55, ../scss/modules/_layout.scss */
+  /* line 56, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 5px 20px 10px;
     width: 110px;
     height: 110px;
   }
-  /* line 60, ../scss/modules/_layout.scss */
+  /* line 61, ../scss/modules/_layout.scss */
   header #main-title {
     margin: 20px 0;
     width: 173px;
@@ -193,13 +194,13 @@ header #main-title {
   }
 }
 @media (min-width: 1041px) {
-  /* line 70, ../scss/modules/_layout.scss */
+  /* line 71, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 5px 20px -30px;
     width: 130px;
     height: 130px;
   }
-  /* line 75, ../scss/modules/_layout.scss */
+  /* line 76, ../scss/modules/_layout.scss */
   header #main-title {
     width: 160px;
     font-size: 36px;
@@ -207,13 +208,13 @@ header #main-title {
   }
 }
 @media (min-width: 1121px) {
-  /* line 84, ../scss/modules/_layout.scss */
+  /* line 85, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 10px 20px -70px;
     width: 146px;
     height: 146px;
   }
-  /* line 89, ../scss/modules/_layout.scss */
+  /* line 90, ../scss/modules/_layout.scss */
   header #main-title {
     width: 160px;
     font-size: 41px;
@@ -221,13 +222,13 @@ header #main-title {
   }
 }
 @media (min-width: 1201px) {
-  /* line 98, ../scss/modules/_layout.scss */
+  /* line 99, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 10px 20px -110px;
     width: 156px;
     height: 156px;
   }
-  /* line 103, ../scss/modules/_layout.scss */
+  /* line 104, ../scss/modules/_layout.scss */
   header #main-title {
     width: 160px;
     font-size: 46px;
@@ -235,7 +236,7 @@ header #main-title {
   }
 }
 @media (min-width: 1280px) {
-  /* line 112, ../scss/modules/_layout.scss */
+  /* line 113, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 10px 20px -160px;
   }
