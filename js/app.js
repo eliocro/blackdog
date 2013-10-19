@@ -48,7 +48,8 @@
   app.filter('month', function() {
     return function(input) {
       if(!input){ return ''; }
-      var months = ["jan", "feb", "mar", "apr", "may", "jun", "july", "aug", "sept", "oct", "nov", "dec" ];
+      var months = ["jan", "feb", "mar", "apr", "may", "jun", "july",
+        "aug", "sept", "oct", "nov", "dec" ];
       return months[input.getMonth()];
     };
   });
@@ -57,7 +58,10 @@
   app.run(function ($rootScope, $location) {
     $rootScope.isActive = function (param) {
       return ($location.path().substr(1) === param) ? 'active' : '';
-    }
+    };
+    $rootScope.$on('$routeChangeStart', function () {
+      $rootScope.menu.show = false;
+    });
   });
 
   /* Controllers */
@@ -83,6 +87,33 @@
     $scope.sendContact = function () {
       $scope.sending = true;
       console.log($scope.contact);
+      return;
+
+      var subject = "Novo contacto do site: " + contact.subject;
+      var body = "<b>Nome:</b> " + contact.name + "<br/><b>Email:</b> " +
+        contact.email + "<br/><b>Assunto:</b> " + contact.subject + "<br/><br/>" +
+        contact.message;
+
+      $http.post('http://www.projecto24.com/contacto/enviar/externo/', {
+          subject: subject,
+          from: contact.email,
+          body: body,
+          token: 12572394
+      })
+      .success(function(data) {
+        if( data === '0' ){
+          alert('Message Sent. Thank You.');
+          $scope.contact = {};
+        }
+        else {
+          alert('Message Failed. Please try again later.');
+          $scope.sending = false;
+        }
+      })
+      .error(function (data, status) {
+        alert('Message Failed. Please try again later.');
+        $scope.sending = false;
+      });
 
       if(!$scope.$$phase) $scope.$apply();
     };

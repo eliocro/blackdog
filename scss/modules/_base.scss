@@ -1,0 +1,25 @@
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+.red {
+  color: #FF0000;
+}
+
+a {
+  text-decoration: underline;
+  color: #ccc;
+}
+a:hover {
+  color: #aaa;
+}
+
+img {
+  border: 0;
+}
+
+html {
+ /*  -webkit-text-stroke-width: .2px;
+  -webkit-text-stroke-color: #34343b; */
+  // -webkit-font-smoothing: antialiased;
+}
