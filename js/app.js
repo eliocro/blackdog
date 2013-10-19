@@ -62,6 +62,9 @@
     $rootScope.$on('$routeChangeStart', function () {
       $rootScope.menu.show = false;
     });
+    $rootScope.$on('$viewContentLoaded', function(event) {
+      $window._gaq.push(['_trackPageview', $location.path()]);
+    });
   });
 
   /* Controllers */
