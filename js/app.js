@@ -48,7 +48,8 @@
   app.filter('month', function() {
     return function(input) {
       if(!input){ return ''; }
-      var months = ["jan", "feb", "mar", "apr", "may", "jun", "july", "aug", "sept", "oct", "nov", "dec" ];
+      var months = ["jan", "feb", "mar", "apr", "may", "jun", "july",
+        "aug", "sept", "oct", "nov", "dec" ];
       return months[input.getMonth()];
     };
   });
@@ -58,6 +59,9 @@
     $rootScope.isActive = function (param) {
       return ($location.path().substr(1) === param) ? 'active' : '';
     };
+    $rootScope.$on('$routeChangeStart', function () {
+      $rootScope.menu.show = false;
+    });
   });
 
   /* Controllers */
