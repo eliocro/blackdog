@@ -118,7 +118,7 @@ html {
 
 /* line 1, ../scss/modules/_layout.scss */
 body {
-  background: url("/img/back1.jpg") center 110px no-repeat black;
+  background: url("/blackdog/img/back1.jpg") center 110px no-repeat black;
   background-size: 100%;
   color: #fff;
   font: 13px normal Arial, Helvetica, sans-serif;
@@ -127,7 +127,7 @@ body {
 @media (min-width: 961px) {
   /* line 8, ../scss/modules/_layout.scss */
   body {
-    background: url("/img/back1.jpg") center top no-repeat #0d0d0d;
+    background: url("/blackdog/img/back1.jpg") center top no-repeat #0d0d0d;
     background-size: 100%;
   }
 }
@@ -375,7 +375,7 @@ aside ul li a:hover, aside ul li a.active {
   width: 100%;
   padding: 1px 20px 20px;
   min-height: 320px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
@@ -524,17 +524,17 @@ p {
   top: 15px;
   width: 19px;
   height: 19px;
-  background: url("/img/close.png") 0 0px no-repeat;
+  background: url("/blackdog/img/close.png") 0 0px no-repeat;
   cursor: pointer;
   text-decoration: none;
 }
 /* line 46, ../scss/modules/_ui-elements.scss */
 .closeFrame:hover {
-  background: url("/img/close.png") 0 -19px no-repeat;
+  background: url("/blackdog/img/close.png") 0 -19px no-repeat;
 }
 /* line 49, ../scss/modules/_ui-elements.scss */
 .closeFrame:active {
-  background: url("/img/close.png") 0 0px no-repeat;
+  background: url("/blackdog/img/close.png") 0 0px no-repeat;
 }
 
 /* line 54, ../scss/modules/_ui-elements.scss */
