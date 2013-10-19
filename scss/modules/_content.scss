@@ -1,11 +1,12 @@
 
 #main-content {
-  width: 100%;
-  background: rgba(0,0,0,0.7);
   position: relative;
+  width: 100%;
   padding: 1px 20px 20px;
-  box-sizing:border-box;
-  -moz-box-sizing:border-box; /* Firefox */
+  min-height: 320px;
+  background: rgba(0,0,0,0.7);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   h1 {
     font-size: 26px;
     font-weight: bold;
@@ -52,7 +53,7 @@
   #main-content {
     width: 700px;
     float: right;
-    margin: 10px;
+    margin: 20px 10px 0;
   }
 }
 

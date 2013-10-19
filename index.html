@@ -1,12 +1,13 @@
 <!doctype html>
 <html ng-app="blackdog">
   <head>
-    <base href="/">
-    <meta charset='utf-8'>
+    <base href="/blackdog/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <title>Black Dog Blues Band</title>
-    <meta name="description" content=""/>
-    <meta name="keywords" content="" />
+    <meta name="description" content="Black Dog Blues Band, a blues band from Madeira, Portugal. Biography, Tour Dates, Media, Contacts. Daniel Henriques - vocals and harmonica; Eduardo Fernandes - drums; Rodolfo Cro - guitar, and Paulo Aveiro - bass."/>
+    <meta name="keywords" content="black dog, blues, band, guitar, funchal, madeira, portugal, music, tour, dates" />
     <meta name="author" content="Projecto24" />
 
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png" />
@@ -15,19 +16,14 @@
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-33935311-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
     </script>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <a href="#!/"><img id="main-logo" src="/img/logo.jpg" /></a>
-        <div id="main-title">Black Dog Blues Band</div>
+        <div id="main-title"><h1>Black Dog Blues Band</h1></div>
         <a ng-click="menu.show=!menu.show" class="btn-navbar">
           <span></span>
           <span></span>
@@ -56,6 +52,17 @@
       </aside>
 
       <div id="main-content" ng-view></div>
+
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+      <a class="addthis_button_tweet"></a>
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+      <a class="addthis_counter addthis_pill_style"></a>
+      </div>
+      <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e8b2f64614d5f0f"></script>
+      <!-- AddThis Button END -->
       <div class="clear" style="height: 50px;"></div>
     </div>
 
@@ -68,11 +75,6 @@
           <a href="http://www.flickr.com/photos/84277882@N05/" target="_blank"><img src="/img/social/flickr.png" /></a>
           <a href="http://www.soundcloud.com/blackdogbluesband" target="_blank"><img src="/img/social/soundcloud.png" /></a>
         </div>
-        <!-- <ul class="backchoice">
-          <li id="back_1" class="active" onclick="changeBack(1);">1</li>
-          <li id="back_2" onclick="changeBack(2);">2</li>
-          <li id="back_3" onclick="changeBack(3);">3</li>
-        </ul> -->
         <div class="copy">
           <span>&copy; 2012-2013 <b>Black Dog Blues Band</b>.</span>
           <span>Powered by <a target="_blank" href="http://www.projecto24.com/">Projecto24</a>.</span>
