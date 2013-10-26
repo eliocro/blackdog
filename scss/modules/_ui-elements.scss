@@ -2,11 +2,11 @@
 .btn-navbar {
   position: absolute;
   z-index: 100px;
-  top: 30px;
-  right: 30px;
+  top: 12px;
+  right: 15px;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 
   border-radius: 8px;
   cursor: pointer;
@@ -21,8 +21,8 @@
   }
   span {
     display: block;
-    margin: 8px 6px 8px;
-    height: 6px;
+    margin: 7px 6px;
+    height: 4px;
     background: #999;
     border-radius: 3px;
   }

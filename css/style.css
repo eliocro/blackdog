@@ -152,25 +152,25 @@ body {
 /* line 30, ../scss/modules/_layout.scss */
 header {
   position: relative;
-  height: 110px;
+  height: 70px;
 }
 /* line 34, ../scss/modules/_layout.scss */
 header #main-logo {
   float: left;
-  margin: 5px 0 0 10px;
-  width: 100px;
-  height: 100px;
+  margin: 4px 0 0 10px;
+  width: 60px;
+  height: 60px;
 }
 /* line 40, ../scss/modules/_layout.scss */
 header #main-title {
   float: left;
-  margin: 20px 0 0 10px;
-  width: 270px;
+  margin: 12px 0 0 10px;
+  width: 150px;
   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 36px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: 22px;
 }
 
 @media (min-width: 961px) {
@@ -486,11 +486,11 @@ p {
 .btn-navbar {
   position: absolute;
   z-index: 100px;
-  top: 30px;
-  right: 30px;
+  top: 12px;
+  right: 15px;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   cursor: pointer;
   background: #0e0e0e linear-gradient(#151515, #040404) repeat-x scroll 0% 0%/auto padding-box border-box;
@@ -504,8 +504,8 @@ p {
 /* line 22, ../scss/modules/_ui-elements.scss */
 .btn-navbar span {
   display: block;
-  margin: 8px 6px 8px;
-  height: 6px;
+  margin: 7px 6px;
+  height: 4px;
   background: #999;
   border-radius: 3px;
 }
