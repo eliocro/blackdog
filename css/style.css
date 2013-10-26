@@ -267,7 +267,7 @@ aside ul li a {
   padding: 10px 80px 10px 20px;
   border-top: 1px solid #aaa;
   color: #f0f0f0;
-  background: #111;
+  background: black url("../img/icons-sprite.png") no-repeat right -97px;
   font-size: 16px;
   font-weight: 800;
   cursor: pointer;
@@ -304,7 +304,7 @@ aside ul li a:hover, aside ul li a.active {
     background: none;
   }
 }
-@media (min-width: 769px) and (max-width: 960px) {
+@media (min-width: 665px) and (max-width: 960px) {
   /* line 60, ../scss/modules/_menu.scss */
   aside {
     position: absolute;
@@ -312,8 +312,8 @@ aside ul li a:hover, aside ul li a.active {
     right: 0;
     clear: none;
     float: right;
-    width: 55%;
-    margin: 10px 0;
+    width: 65%;
+    margin: 0px 0;
   }
   /* line 68, ../scss/modules/_menu.scss */
   aside ul {

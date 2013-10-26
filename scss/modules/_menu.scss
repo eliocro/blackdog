@@ -18,7 +18,7 @@ aside {
         border-top: 1px solid #aaa;
 
         color: #f0f0f0;
-        background: #111;
+        background: #000 url('../img/icons-sprite.png') no-repeat right -97px;
         font-size: 16px;
         font-weight: 800;
 
@@ -56,15 +56,15 @@ aside {
     }
   }
 }
-@media (min-width: 769px) and (max-width: 960px) {
+@media (min-width: 665px) and (max-width: 960px) {
   aside {
     position: absolute;
     top: 0;
     right: 0;
     clear: none;
     float: right;
-    width: 55%;
-    margin: 10px 0;
+    width: 65%;
+    margin: 0px 0;
     ul {
       border: none;
     }
