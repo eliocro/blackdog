@@ -20,6 +20,12 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  img.small50 {
+    width: 50%;
+  }
+}
 @media (max-width: 768px) {
   #main-content {
     .home-block {
@@ -59,22 +65,22 @@
 
 .event {
   margin: 10px 0 25px 0;
-}
-.event .date {
-  float: left;
-  width: 44px;
-  padding: 0 20px 10px 0;
-}
-.event .date .day {
-  font-size: 38px;
-  font-weight: bold;
-  text-align: center;
-}
-.event .date .month {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 14px;
+  .date {
+    float: left;
+    width: 44px;
+    padding: 0 20px 10px 0;
+  }
+  .date .day {
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .date .month {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 14px;
+  }
 }
 
 h3, .event .title {

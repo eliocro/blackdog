@@ -95,26 +95,67 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   li {
     list-style: none;
     display: block;
     float: left;
-    margin: 0 6px 10px;
-    background: #fff;
-    padding: 5px;
+    width: 31%;
     text-align: center;
+    padding: 3px;
     a {
       display: block;
-      position: relative;
+      padding: 5px;
+      background: #f0f0f0;
       overflow: hidden;
-      width: 110px;
-      height: 75px;
       color: #666;
       text-decoration: none;
+      text-align: center;
       font-size: 11px;
     }
     img {
-      height: 75px;
+      height: 60px;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  #flickrGallery {
+    li {
+      img {
+        height: 75px;
+      }
+    }
+  }
+}
+@media (min-width: 600px) {
+  #flickrGallery {
+    li {
+      width: 23%;
+      img {
+        height: 75px;
+      }
+    }
+  }
+}
+@media (min-width: 640px) {
+  #flickrGallery {
+    li {
+      width: 19%;
+      img {
+        height: 70px;
+      }
+    }
+  }
+}
+@media (min-width: 680px) {
+  #flickrGallery {
+    li {
+      width: 19%;
+      img {
+        height: 75px;
+      }
     }
   }
 }

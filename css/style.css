@@ -420,62 +420,65 @@ aside ul li a:hover, aside ul li a.active {
   margin: 0px 0px 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   /* line 25, ../scss/modules/_content.scss */
+  img.small50 {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  /* line 31, ../scss/modules/_content.scss */
   #main-content .home-block {
     clear: both;
   }
 }
 @media (max-width: 960px) {
-  /* line 31, ../scss/modules/_content.scss */
+  /* line 37, ../scss/modules/_content.scss */
   #main-content {
     border-top: 1px solid #333;
   }
 }
 @media (min-width: 769px) {
-  /* line 38, ../scss/modules/_content.scss */
+  /* line 44, ../scss/modules/_content.scss */
   #main-content .home-block.bio {
     float: left;
     width: 50%;
   }
-  /* line 42, ../scss/modules/_content.scss */
+  /* line 48, ../scss/modules/_content.scss */
   #main-content .home-block.dates {
     float: right;
     width: 46%;
   }
-  /* line 46, ../scss/modules/_content.scss */
+  /* line 52, ../scss/modules/_content.scss */
   #main-content .home-block.photos {
     clear: both;
   }
 }
 @media (min-width: 961px) {
-  /* line 53, ../scss/modules/_content.scss */
+  /* line 59, ../scss/modules/_content.scss */
   #main-content {
     width: 700px;
     float: right;
     margin: 20px 10px 0;
   }
 }
-/* line 60, ../scss/modules/_content.scss */
+/* line 66, ../scss/modules/_content.scss */
 .event {
   margin: 10px 0 25px 0;
 }
-
-/* line 63, ../scss/modules/_content.scss */
+/* line 68, ../scss/modules/_content.scss */
 .event .date {
   float: left;
   width: 44px;
   padding: 0 20px 10px 0;
 }
-
-/* line 68, ../scss/modules/_content.scss */
+/* line 73, ../scss/modules/_content.scss */
 .event .date .day {
   font-size: 38px;
   font-weight: bold;
   text-align: center;
 }
-
-/* line 73, ../scss/modules/_content.scss */
+/* line 78, ../scss/modules/_content.scss */
 .event .date .month {
   font-size: 22px;
   font-weight: bold;
@@ -483,26 +486,26 @@ aside ul li a:hover, aside ul li a.active {
   line-height: 14px;
 }
 
-/* line 80, ../scss/modules/_content.scss */
+/* line 86, ../scss/modules/_content.scss */
 h3, .event .title {
   font-size: 18px;
   font-weight: bold;
   margin: 5px 0 5px 0;
 }
 
-/* line 86, ../scss/modules/_content.scss */
+/* line 92, ../scss/modules/_content.scss */
 h3 {
   margin-bottom: 10px;
 }
 
-/* line 90, ../scss/modules/_content.scss */
+/* line 96, ../scss/modules/_content.scss */
 p, .event .text {
   color: #ccc;
   font-size: 14px;
   line-height: 18px;
 }
 
-/* line 95, ../scss/modules/_content.scss */
+/* line 101, ../scss/modules/_content.scss */
 p {
   margin-bottom: 10px;
 }
@@ -614,33 +617,70 @@ p {
   margin: 0;
   padding: 0;
   width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
-/* line 98, ../scss/modules/_ui-elements.scss */
+/* line 100, ../scss/modules/_ui-elements.scss */
 #flickrGallery li {
   list-style: none;
   display: block;
   float: left;
-  margin: 0 6px 10px;
-  background: #fff;
-  padding: 5px;
+  width: 31%;
   text-align: center;
+  padding: 3px;
 }
-/* line 106, ../scss/modules/_ui-elements.scss */
+/* line 107, ../scss/modules/_ui-elements.scss */
 #flickrGallery li a {
   display: block;
-  position: relative;
+  padding: 5px;
+  background: #f0f0f0;
   overflow: hidden;
-  width: 110px;
-  height: 75px;
   color: #666;
   text-decoration: none;
+  text-align: center;
   font-size: 11px;
 }
-/* line 116, ../scss/modules/_ui-elements.scss */
+/* line 117, ../scss/modules/_ui-elements.scss */
 #flickrGallery li img {
-  height: 75px;
+  height: 60px;
 }
 
+@media (min-width: 481px) {
+  /* line 126, ../scss/modules/_ui-elements.scss */
+  #flickrGallery li img {
+    height: 75px;
+  }
+}
+@media (min-width: 600px) {
+  /* line 134, ../scss/modules/_ui-elements.scss */
+  #flickrGallery li {
+    width: 23%;
+  }
+  /* line 136, ../scss/modules/_ui-elements.scss */
+  #flickrGallery li img {
+    height: 75px;
+  }
+}
+@media (min-width: 640px) {
+  /* line 144, ../scss/modules/_ui-elements.scss */
+  #flickrGallery li {
+    width: 19%;
+  }
+  /* line 146, ../scss/modules/_ui-elements.scss */
+  #flickrGallery li img {
+    height: 70px;
+  }
+}
+@media (min-width: 680px) {
+  /* line 154, ../scss/modules/_ui-elements.scss */
+  #flickrGallery li {
+    width: 19%;
+  }
+  /* line 156, ../scss/modules/_ui-elements.scss */
+  #flickrGallery li img {
+    height: 75px;
+  }
+}
 /* line 2, ../scss/modules/_contact.scss */
 #contactForm {
   font-size: 14px;
