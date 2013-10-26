@@ -118,7 +118,7 @@ html {
 
 /* line 1, ../scss/modules/_layout.scss */
 body {
-  background: url("/blackdog/img/back1.jpg") center 110px no-repeat black;
+  background: url("/blackdog/img/back1.jpg") center 70px no-repeat black;
   background-size: 100%;
   color: #fff;
   font: 13px normal Arial, Helvetica, sans-serif;
@@ -319,11 +319,11 @@ aside ul li a:hover, aside ul li a.active {
   aside ul li a {
     border-top: none;
     display: inline-block;
-    padding: 4px 18px;
+    padding: 4px 8px;
     background: none;
   }
 }
-@media (min-width: 665px) and (max-width: 960px) {
+@media (min-width: 661px) and (max-width: 960px) {
   /* line 60, ../scss/modules/_menu.scss */
   aside {
     position: absolute;
@@ -338,32 +338,36 @@ aside ul li a:hover, aside ul li a.active {
   aside ul {
     border: none;
   }
+  /* line 70, ../scss/modules/_menu.scss */
+  aside ul a {
+    padding: 4px 14px;
+  }
 }
 @media (min-width: 768px) and (max-width: 960px) {
-  /* line 74, ../scss/modules/_menu.scss */
+  /* line 77, ../scss/modules/_menu.scss */
   aside {
     margin: 8px 0;
   }
 }
 @media (min-width: 961px) {
-  /* line 79, ../scss/modules/_menu.scss */
+  /* line 82, ../scss/modules/_menu.scss */
   aside {
     clear: both;
     float: left;
     width: 230px;
     margin: 200px 0 0 10px;
   }
-  /* line 84, ../scss/modules/_menu.scss */
+  /* line 87, ../scss/modules/_menu.scss */
   aside ul {
     background: none;
     text-align: left;
     border: none;
   }
-  /* line 88, ../scss/modules/_menu.scss */
+  /* line 91, ../scss/modules/_menu.scss */
   aside ul li {
     margin: 4px 0 0;
   }
-  /* line 90, ../scss/modules/_menu.scss */
+  /* line 93, ../scss/modules/_menu.scss */
   aside ul li a {
     background: rgba(0, 0, 0, 0.9);
     padding: 12px 55px 10px 20px;
@@ -371,114 +375,124 @@ aside ul li a:hover, aside ul li a.active {
   }
 }
 @media (min-width: 1041px) {
-  /* line 100, ../scss/modules/_menu.scss */
+  /* line 103, ../scss/modules/_menu.scss */
   aside {
     margin-top: 235px;
   }
 }
 @media (min-width: 1121px) {
-  /* line 105, ../scss/modules/_menu.scss */
+  /* line 108, ../scss/modules/_menu.scss */
   aside {
     margin-top: 270px;
   }
 }
 @media (min-width: 1201px) {
-  /* line 110, ../scss/modules/_menu.scss */
+  /* line 113, ../scss/modules/_menu.scss */
   aside {
     margin-top: 305px;
   }
 }
 @media (min-width: 1280px) {
-  /* line 115, ../scss/modules/_menu.scss */
+  /* line 118, ../scss/modules/_menu.scss */
   aside {
     margin-top: 340px;
   }
 }
-/* line 2, ../scss/modules/_content.scss */
+/* line 1, ../scss/modules/_content.scss */
+#main-container {
+  min-height: 320px;
+}
+
+@media (min-width: 661px) {
+  /* line 5, ../scss/modules/_content.scss */
+  #main-container {
+    min-height: 0;
+  }
+}
+/* line 10, ../scss/modules/_content.scss */
 #main-content {
   position: relative;
   width: 100%;
   padding: 1px 20px 20px;
-  min-height: 320px;
   background: rgba(0, 0, 0, 0.8);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-/* line 10, ../scss/modules/_content.scss */
+/* line 17, ../scss/modules/_content.scss */
 #main-content h1 {
   font-size: 26px;
   font-weight: bold;
   margin: 20px 0 15px;
 }
-/* line 15, ../scss/modules/_content.scss */
+/* line 22, ../scss/modules/_content.scss */
 #main-content img.framed {
   border: 6px solid #fff;
   margin: 0px 10px 10px;
 }
-/* line 18, ../scss/modules/_content.scss */
+/* line 25, ../scss/modules/_content.scss */
 #main-content img.framed.nomargin {
   margin: 0px 0px 10px;
 }
 
 @media (max-width: 480px) {
-  /* line 25, ../scss/modules/_content.scss */
+  /* line 32, ../scss/modules/_content.scss */
   img.small50 {
     width: 50%;
   }
 }
 @media (max-width: 768px) {
-  /* line 31, ../scss/modules/_content.scss */
+  /* line 38, ../scss/modules/_content.scss */
   #main-content .home-block {
     clear: both;
   }
 }
 @media (max-width: 960px) {
-  /* line 37, ../scss/modules/_content.scss */
+  /* line 44, ../scss/modules/_content.scss */
   #main-content {
     border-top: 1px solid #333;
   }
 }
 @media (min-width: 769px) {
-  /* line 44, ../scss/modules/_content.scss */
+  /* line 51, ../scss/modules/_content.scss */
   #main-content .home-block.bio {
     float: left;
     width: 50%;
   }
-  /* line 48, ../scss/modules/_content.scss */
+  /* line 55, ../scss/modules/_content.scss */
   #main-content .home-block.dates {
     float: right;
     width: 46%;
   }
-  /* line 52, ../scss/modules/_content.scss */
+  /* line 59, ../scss/modules/_content.scss */
   #main-content .home-block.photos {
     clear: both;
   }
 }
 @media (min-width: 961px) {
-  /* line 59, ../scss/modules/_content.scss */
+  /* line 66, ../scss/modules/_content.scss */
   #main-content {
     width: 700px;
     float: right;
     margin: 20px 10px 0;
   }
 }
-/* line 66, ../scss/modules/_content.scss */
+/* line 73, ../scss/modules/_content.scss */
 .event {
   margin: 10px 0 25px 0;
 }
-/* line 68, ../scss/modules/_content.scss */
+/* line 75, ../scss/modules/_content.scss */
 .event .date {
   float: left;
   width: 44px;
   padding: 0 20px 10px 0;
 }
-/* line 73, ../scss/modules/_content.scss */
+/* line 80, ../scss/modules/_content.scss */
 .event .date .day {
   font-size: 38px;
   font-weight: bold;
   text-align: center;
 }
-/* line 78, ../scss/modules/_content.scss */
+/* line 85, ../scss/modules/_content.scss */
 .event .date .month {
   font-size: 22px;
   font-weight: bold;
@@ -486,26 +500,26 @@ aside ul li a:hover, aside ul li a.active {
   line-height: 14px;
 }
 
-/* line 86, ../scss/modules/_content.scss */
+/* line 93, ../scss/modules/_content.scss */
 h3, .event .title {
   font-size: 18px;
   font-weight: bold;
   margin: 5px 0 5px 0;
 }
 
-/* line 92, ../scss/modules/_content.scss */
+/* line 99, ../scss/modules/_content.scss */
 h3 {
   margin-bottom: 10px;
 }
 
-/* line 96, ../scss/modules/_content.scss */
+/* line 103, ../scss/modules/_content.scss */
 p, .event .text {
   color: #ccc;
   font-size: 14px;
   line-height: 18px;
 }
 
-/* line 101, ../scss/modules/_content.scss */
+/* line 108, ../scss/modules/_content.scss */
 p {
   margin-bottom: 10px;
 }
@@ -681,6 +695,22 @@ p {
     height: 75px;
   }
 }
+@media (max-width: 480px) {
+  /* line 164, ../scss/modules/_ui-elements.scss */
+  .addthis_toolbox {
+    display: none;
+  }
+}
+@media (min-width: 481px) and (max-width: 660px) {
+  /* line 169, ../scss/modules/_ui-elements.scss */
+  .addthis_toolbox {
+    position: fixed;
+    float: right;
+    top: -10px;
+    right: 0px;
+    width: 40%;
+  }
+}
 /* line 2, ../scss/modules/_contact.scss */
 #contactForm {
   font-size: 14px;
@@ -735,80 +765,90 @@ p {
 
 /* line 2, ../scss/modules/_footer.scss */
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   background: #000;
   padding: 0;
   margin: 0;
   color: #aaa;
-  font-size: 13px;
+  font-size: 11px;
   text-transform: uppercase;
 }
-/* line 15, ../scss/modules/_footer.scss */
+/* line 13, ../scss/modules/_footer.scss */
 footer .social {
   padding: 10px 10px 0;
   text-align: center;
 }
-/* line 18, ../scss/modules/_footer.scss */
+/* line 16, ../scss/modules/_footer.scss */
 footer .social img {
   margin: 0px 2px;
 }
-/* line 22, ../scss/modules/_footer.scss */
+/* line 20, ../scss/modules/_footer.scss */
 footer .copy {
   padding: 8px;
   text-align: center;
 }
-/* line 25, ../scss/modules/_footer.scss */
+/* line 23, ../scss/modules/_footer.scss */
 footer .copy span {
   display: block;
 }
-/* line 28, ../scss/modules/_footer.scss */
+/* line 26, ../scss/modules/_footer.scss */
 footer .copy a {
   color: #aaa;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 32, ../scss/modules/_footer.scss */
+/* line 30, ../scss/modules/_footer.scss */
 footer .copy a:hover {
   color: #aaa;
   text-decoration: underline;
 }
 
 @media (min-width: 481px) {
-  /* line 41, ../scss/modules/_footer.scss */
+  /* line 39, ../scss/modules/_footer.scss */
   footer .social {
     float: left;
     text-align: left;
   }
-  /* line 45, ../scss/modules/_footer.scss */
+  /* line 43, ../scss/modules/_footer.scss */
   footer .copy {
     float: right;
     text-align: right;
   }
 }
+@media (min-width: 661px) {
+  /* line 50, ../scss/modules/_footer.scss */
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+
+  /* line 54, ../scss/modules/_footer.scss */
+  .footer-clear {
+    height: 50px;
+  }
+}
 @media (min-width: 769px) {
-  /* line 53, ../scss/modules/_footer.scss */
+  /* line 60, ../scss/modules/_footer.scss */
   footer .social {
     padding: 7px;
   }
-  /* line 56, ../scss/modules/_footer.scss */
+  /* line 63, ../scss/modules/_footer.scss */
   footer .copy {
-    padding: 12px 10px;
+    padding: 14px 10px;
   }
-  /* line 58, ../scss/modules/_footer.scss */
+  /* line 65, ../scss/modules/_footer.scss */
   footer .copy span {
     display: inline-block;
   }
 }
 @media (min-width: 961px) {
-  /* line 65, ../scss/modules/_footer.scss */
+  /* line 73, ../scss/modules/_footer.scss */
   footer .wrapper {
     width: 960px;
     margin: 0 auto;
   }
 }
-/* line 71, ../scss/modules/_footer.scss */
+/* line 80, ../scss/modules/_footer.scss */
 ul.backchoice {
   margin: 0 0 0 10px;
   padding: 6px 0 0;
@@ -816,7 +856,7 @@ ul.backchoice {
   display: none;
 }
 
-/* line 77, ../scss/modules/_footer.scss */
+/* line 86, ../scss/modules/_footer.scss */
 ul.backchoice li {
   list-style: none;
   float: left;
@@ -831,7 +871,7 @@ ul.backchoice li {
   cursor: pointer;
 }
 
-/* line 90, ../scss/modules/_footer.scss */
+/* line 99, ../scss/modules/_footer.scss */
 ul.backchoice li.active, ul.backchoice li:hover {
   background: #000;
   color: #fff;

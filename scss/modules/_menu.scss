@@ -49,14 +49,14 @@ aside {
         a {
           border-top: none;
           display: inline-block;
-          padding: 4px 18px;
+          padding: 4px 8px;
           background: none;
         }
       }
     }
   }
 }
-@media (min-width: 665px) and (max-width: 960px) {
+@media (min-width: 661px) and (max-width: 960px) {
   aside {
     position: absolute;
     top: 0;
@@ -67,6 +67,9 @@ aside {
     margin: 0;
     ul {
       border: none;
+      a {
+          padding: 4px 14px;
+      }
     }
   }
 }

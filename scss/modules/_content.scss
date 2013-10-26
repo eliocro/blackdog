@@ -1,9 +1,16 @@
+#main-container {
+  min-height: 320px;
+}
+@media (min-width: 661px) {
+  #main-container {
+    min-height: 0;
+  }
+}
 
 #main-content {
   position: relative;
   width: 100%;
   padding: 1px 20px 20px;
-  min-height: 320px;
   background: rgba(0,0,0,0.8);
   box-sizing: border-box;
   -moz-box-sizing: border-box;

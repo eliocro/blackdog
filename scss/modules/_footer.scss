@@ -1,7 +1,5 @@
 
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   background: #000;
   // border: 1px solid red;
@@ -9,7 +7,7 @@ footer {
   padding: 0;
   margin: 0;
   color: #aaa;
-  font-size: 13px;
+  font-size: 11px;
   text-transform: uppercase;
 
   .social {
@@ -48,13 +46,22 @@ footer {
     }
   }
 }
+@media (min-width: 661px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+  .footer-clear {
+    height: 50px;
+  }
+}
 @media (min-width: 769px) {
   footer {
     .social {
       padding: 7px;
     }
     .copy {
-      padding: 12px 10px;
+      padding: 14px 10px;
       span {
         display: inline-block;
       }
@@ -62,9 +69,11 @@ footer {
   }
 }
 @media (min-width: 961px) {
-  footer .wrapper {
-    width: 960px;
-    margin: 0 auto;
+  footer {
+    .wrapper {
+      width: 960px;
+      margin: 0 auto;
+    }
   }
 }
 
