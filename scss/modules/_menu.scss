@@ -64,10 +64,15 @@ aside {
     clear: none;
     float: right;
     width: 65%;
-    margin: 0px 0;
+    margin: 0;
     ul {
       border: none;
     }
+  }
+}
+@media (min-width: 768px) and (max-width: 960px) {
+  aside {
+    margin: 8px 0;
   }
 }
 @media (min-width: 961px) {

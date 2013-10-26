@@ -173,19 +173,38 @@ header #main-title {
   line-height: 22px;
 }
 
-@media (min-width: 961px) {
+@media (min-width: 768px) and (max-width: 960px) {
   /* line 53, ../scss/modules/_layout.scss */
+  header {
+    height: 82px;
+  }
+  /* line 55, ../scss/modules/_layout.scss */
+  header #main-logo {
+    margin: 5px 5px 0px 10px;
+    width: 75px;
+    height: 75px;
+  }
+  /* line 60, ../scss/modules/_layout.scss */
+  header #main-title {
+    margin: 15px 0 0;
+    width: 190px;
+    font-size: 26px;
+    line-height: 28px;
+  }
+}
+@media (min-width: 961px) {
+  /* line 69, ../scss/modules/_layout.scss */
   header {
     position: absolute;
     z-index: 100;
   }
-  /* line 56, ../scss/modules/_layout.scss */
+  /* line 72, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 5px 20px 10px;
     width: 110px;
     height: 110px;
   }
-  /* line 61, ../scss/modules/_layout.scss */
+  /* line 77, ../scss/modules/_layout.scss */
   header #main-title {
     margin: 20px 0;
     width: 173px;
@@ -194,13 +213,13 @@ header #main-title {
   }
 }
 @media (min-width: 1041px) {
-  /* line 71, ../scss/modules/_layout.scss */
+  /* line 87, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 5px 20px -30px;
     width: 130px;
     height: 130px;
   }
-  /* line 76, ../scss/modules/_layout.scss */
+  /* line 92, ../scss/modules/_layout.scss */
   header #main-title {
     width: 160px;
     font-size: 36px;
@@ -208,13 +227,13 @@ header #main-title {
   }
 }
 @media (min-width: 1121px) {
-  /* line 85, ../scss/modules/_layout.scss */
+  /* line 101, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 10px 20px -70px;
     width: 146px;
     height: 146px;
   }
-  /* line 90, ../scss/modules/_layout.scss */
+  /* line 106, ../scss/modules/_layout.scss */
   header #main-title {
     width: 160px;
     font-size: 41px;
@@ -222,13 +241,13 @@ header #main-title {
   }
 }
 @media (min-width: 1201px) {
-  /* line 99, ../scss/modules/_layout.scss */
+  /* line 115, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 10px 20px -110px;
     width: 156px;
     height: 156px;
   }
-  /* line 104, ../scss/modules/_layout.scss */
+  /* line 120, ../scss/modules/_layout.scss */
   header #main-title {
     width: 160px;
     font-size: 46px;
@@ -236,7 +255,7 @@ header #main-title {
   }
 }
 @media (min-width: 1280px) {
-  /* line 113, ../scss/modules/_layout.scss */
+  /* line 129, ../scss/modules/_layout.scss */
   header #main-logo {
     margin: 20px 10px 20px -160px;
   }
@@ -313,32 +332,38 @@ aside ul li a:hover, aside ul li a.active {
     clear: none;
     float: right;
     width: 65%;
-    margin: 0px 0;
+    margin: 0;
   }
   /* line 68, ../scss/modules/_menu.scss */
   aside ul {
     border: none;
   }
 }
-@media (min-width: 961px) {
+@media (min-width: 768px) and (max-width: 960px) {
   /* line 74, ../scss/modules/_menu.scss */
+  aside {
+    margin: 8px 0;
+  }
+}
+@media (min-width: 961px) {
+  /* line 79, ../scss/modules/_menu.scss */
   aside {
     clear: both;
     float: left;
     width: 230px;
     margin: 200px 0 0 10px;
   }
-  /* line 79, ../scss/modules/_menu.scss */
+  /* line 84, ../scss/modules/_menu.scss */
   aside ul {
     background: none;
     text-align: left;
     border: none;
   }
-  /* line 83, ../scss/modules/_menu.scss */
+  /* line 88, ../scss/modules/_menu.scss */
   aside ul li {
     margin: 4px 0 0;
   }
-  /* line 85, ../scss/modules/_menu.scss */
+  /* line 90, ../scss/modules/_menu.scss */
   aside ul li a {
     background: rgba(0, 0, 0, 0.9);
     padding: 12px 55px 10px 20px;
@@ -346,25 +371,25 @@ aside ul li a:hover, aside ul li a.active {
   }
 }
 @media (min-width: 1041px) {
-  /* line 95, ../scss/modules/_menu.scss */
+  /* line 100, ../scss/modules/_menu.scss */
   aside {
     margin-top: 235px;
   }
 }
 @media (min-width: 1121px) {
-  /* line 100, ../scss/modules/_menu.scss */
+  /* line 105, ../scss/modules/_menu.scss */
   aside {
     margin-top: 270px;
   }
 }
 @media (min-width: 1201px) {
-  /* line 105, ../scss/modules/_menu.scss */
+  /* line 110, ../scss/modules/_menu.scss */
   aside {
     margin-top: 305px;
   }
 }
 @media (min-width: 1280px) {
-  /* line 110, ../scss/modules/_menu.scss */
+  /* line 115, ../scss/modules/_menu.scss */
   aside {
     margin-top: 340px;
   }
