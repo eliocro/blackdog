@@ -55,7 +55,8 @@
   });
 
   /* Global functions */
-  app.run(function ($rootScope, $location) {
+  app.run(function ($rootScope, $location, $window) {
+    $rootScope.menu = {};
     $rootScope.isActive = function (param) {
       return ($location.path().substr(1) === param) ? 'active' : '';
     };
