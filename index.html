@@ -21,7 +21,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <a href="#!/"><img id="main-logo" src="img/logo.jpg" /></a>
+        <a href="#/"><img id="main-logo" src="img/logo.jpg" /></a>
         <div id="main-title"><h1>Black Dog Blues Band</h1></div>
         <a ng-click="menu.show=!menu.show" class="btn-navbar">
           <span></span>
@@ -33,19 +33,19 @@
       <aside ng-class="{'hidden': !menu.show}">
         <ul>
           <li id="menu-home">
-            <a ng-class="isActive('home')" href="#!/home">Home</a>
+            <a ng-class="isActive('home')" href="#/home">Home</a>
           </li>
           <li id="menu-bio">
-            <a ng-class="isActive('bio')" href="#!/bio">Biography</a>
+            <a ng-class="isActive('bio')" href="#/bio">Biography</a>
           </li>
           <li id="menu-dates">
-            <a ng-class="isActive('dates')" href="#!/dates">Tour Dates</a>
+            <a ng-class="isActive('dates')" href="#/dates">Tour Dates</a>
           </li>
           <li id="menu-media">
-            <a ng-class="isActive('media')" href="#!/media">Media</a>
+            <a ng-class="isActive('media')" href="#/media">Media</a>
           </li>
           <li id="menu-contacts">
-            <a ng-class="isActive('contacts')" href="#!/contacts">Contacts</a>
+            <a ng-class="isActive('contacts')" href="#/contacts">Contacts</a>
           </li>
         </ul>
       </aside>

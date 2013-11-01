@@ -5,7 +5,7 @@
   app.config(function($routeProvider, $httpProvider, $locationProvider) {
 
     $httpProvider.defaults.useXDomain = true;
-    $locationProvider.hashPrefix('!');
+    // $locationProvider.hashPrefix('!');
     // $locationProvider.html5Mode(true);
 
     $routeProvider.
