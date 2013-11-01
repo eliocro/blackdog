@@ -306,7 +306,7 @@ aside ul li a:hover, aside ul li a.active {
   }
   /* line 42, ../scss/modules/_menu.scss */
   aside ul {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     text-align: center;
     border-top: 1px solid #666;
     padding: 10px 0;
@@ -414,7 +414,7 @@ aside ul li a:hover, aside ul li a.active {
   position: relative;
   width: 100%;
   padding: 1px 20px 20px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
