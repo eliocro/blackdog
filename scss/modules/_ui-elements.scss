@@ -40,14 +40,14 @@
   top: 15px;
   width: 19px;
   height: 19px;
-  background: url('/blackdog/img/close.png') 0 0px no-repeat;
+  background: url('/img/close.png') 0 0px no-repeat;
   cursor: pointer;
   text-decoration: none;
   &:hover {
-    background: url('/blackdog/img/close.png') 0 -19px no-repeat;
+    background: url('/img/close.png') 0 -19px no-repeat;
   }
   &:active {
-    background: url('/blackdog/img/close.png') 0 0px no-repeat;
+    background: url('/img/close.png') 0 0px no-repeat;
   }
 }
 

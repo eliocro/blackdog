@@ -566,17 +566,17 @@ p {
   top: 15px;
   width: 19px;
   height: 19px;
-  background: url("/blackdog/img/close.png") 0 0px no-repeat;
+  background: url("/img/close.png") 0 0px no-repeat;
   cursor: pointer;
   text-decoration: none;
 }
 /* line 46, ../scss/modules/_ui-elements.scss */
 .closeFrame:hover {
-  background: url("/blackdog/img/close.png") 0 -19px no-repeat;
+  background: url("/img/close.png") 0 -19px no-repeat;
 }
 /* line 49, ../scss/modules/_ui-elements.scss */
 .closeFrame:active {
-  background: url("/blackdog/img/close.png") 0 0px no-repeat;
+  background: url("/img/close.png") 0 0px no-repeat;
 }
 
 /* line 54, ../scss/modules/_ui-elements.scss */
