@@ -118,7 +118,7 @@ html {
 
 /* line 1, ../scss/modules/_layout.scss */
 body {
-  background: url("/blackdog/img/back1.jpg") center 70px no-repeat black;
+  background: url("/img/back1.jpg") center 70px no-repeat black;
   background-size: 100%;
   color: #fff;
   font: 13px normal Arial, Helvetica, sans-serif;
@@ -127,7 +127,7 @@ body {
 @media (min-width: 961px) {
   /* line 8, ../scss/modules/_layout.scss */
   body {
-    background: url("/blackdog/img/back1.jpg") center top no-repeat #0d0d0d;
+    background: url("/img/back1.jpg") center top no-repeat #0d0d0d;
     background-size: 100%;
   }
 }
