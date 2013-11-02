@@ -1,5 +1,5 @@
 body {
-  background: url("/img/back1.jpg") center 70px no-repeat #000;
+  background: url("/img/back2.jpg") center 70px no-repeat #000;
   background-size: 100%;
   color: #fff;
   font: 13px normal Arial, Helvetica, sans-serif;
@@ -52,6 +52,7 @@ header {
 @media (min-width: 768px) and (max-width: 960px) {
   header {
     height: 82px;
+    background: #000;
     #main-logo {
       margin: 5px 5px 0px 10px;
       width: 75px;
