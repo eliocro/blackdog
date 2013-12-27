@@ -138,13 +138,15 @@
       // console.log(data);
       var eventsList = [];
       // Parse Events
-      for(var i = 0; i < data.data.items.length; i++ ){
-        var event = data.data.items[i];
-        eventsList.push({
-          "title" : event.title,
-          "start" : moment(event.when[0].start).toDate(),
-          "details" : (event.details.length > trim) ? (event.details.substr(0, trim) + '...') : event.details
-        });
+      if(data.data.items){
+        for(var i = 0; i < data.data.items.length; i++ ){
+          var event = data.data.items[i];
+          eventsList.push({
+            "title" : event.title,
+            "start" : moment(event.when[0].start).toDate(),
+            "details" : (event.details.length > trim) ? (event.details.substr(0, trim) + '...') : event.details
+          });
+        }
       }
       // Sort Events
       eventsList.sort(function(a,b) {
