@@ -2,6 +2,8 @@
 footer {
   width: 100%;
   background: #000;
+  position: fixed;
+  bottom: 0;
   // border: 1px solid red;
 
   padding: 0;
@@ -47,10 +49,10 @@ footer {
   }
 }
 @media (min-width: 661px) {
-  footer {
-    position: fixed;
-    bottom: 0;
-  }
+  // footer {
+  //   position: fixed;
+  //   bottom: 0;
+  // }
   .footer-clear {
     height: 50px;
   }
