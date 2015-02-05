@@ -160,8 +160,8 @@
       scope.evLoaded = true;
     })
     .error(function (data, status) {
-      // console.log('Error', data, status);
-      alert('Error ' + status);
+      console.log('Error', data, status);
+      // alert('Error ' + status);
       scope.evLoaded = true;
     });
   }
