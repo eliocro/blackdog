@@ -1,4 +1,9 @@
 
+*, *:after, *:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 .left { float: left; }
 .right { float: right; }
 .clear { clear: both; }
@@ -6,24 +11,26 @@
   color: #FF0000;
 }
 
+
 a {
   text-decoration: underline;
   color: #ccc;
-}
-a:hover {
-  color: #aaa;
+  &:hover {
+    color: #aaa;
+  }
 }
 
 img {
+  max-width: 100%;
   border: 0;
 }
 
+
 html {
- /*  -webkit-text-stroke-width: .2px;
-  -webkit-text-stroke-color: #34343b; */
+  // -webkit-text-stroke-width: .2px;
+  // -webkit-text-stroke-color: #34343b;
   // -webkit-font-smoothing: antialiased;
 }
-
 
 .addthis_toolbox {
   width: 350px;

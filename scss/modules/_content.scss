@@ -10,14 +10,12 @@
 #main-content {
   position: relative;
   width: 100%;
-  padding: 1px 20px 20px;
   background: rgba(0,0,0,0.9);
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+
   h1 {
     font-size: 26px;
     font-weight: bold;
-    margin: 20px 0 15px;
+    margin: 0 0 15px;
   }
   img.framed {
     border: 6px solid #fff;
@@ -26,6 +24,10 @@
       margin: 0px 0px 10px;
     }
   }
+}
+
+#main-content .content {
+  padding: 20px;
 }
 
 @media (max-width: 480px) {
@@ -71,11 +73,11 @@
 }
 
 .event {
-  margin: 10px 0 25px 0;
+  margin: 10px 0 25px;
   .date {
     float: left;
     width: 44px;
-    padding: 0 20px 10px 0;
+    margin-right: 12px;
   }
   .date .day {
     font-size: 38px;
@@ -93,7 +95,7 @@
 h3, .event .title {
   font-size: 18px;
   font-weight: bold;
-  margin: 5px 0 5px 0;
+  margin: 5px 0;
 }
 
 h3 {

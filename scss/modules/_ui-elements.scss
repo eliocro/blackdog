@@ -95,13 +95,12 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+
   li {
     list-style: none;
     display: block;
     float: left;
-    width: 31%;
+    width: 33%;
     text-align: center;
     padding: 3px;
     a {
@@ -115,7 +114,9 @@
       font-size: 11px;
     }
     img {
-      height: 60px;
+      display: block;
+      margin: 0 auto;
+      height: 55px;
     }
   }
 }
@@ -123,8 +124,9 @@
 @media (min-width: 481px) {
   #flickrGallery {
     li {
+      width: 25%;
       img {
-        height: 75px;
+        height: 70px;
       }
     }
   }
@@ -132,9 +134,8 @@
 @media (min-width: 600px) {
   #flickrGallery {
     li {
-      width: 23%;
       img {
-        height: 75px;
+        height: 60px;
       }
     }
   }
@@ -142,19 +143,18 @@
 @media (min-width: 640px) {
   #flickrGallery {
     li {
-      width: 19%;
       img {
         height: 70px;
       }
     }
   }
 }
-@media (min-width: 680px) {
+@media (min-width: 760px) {
   #flickrGallery {
     li {
-      width: 19%;
+      width: 20%;
       img {
-        height: 75px;
+        height: 80px;
       }
     }
   }
