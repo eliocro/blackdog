@@ -1,42 +1,137 @@
 (function() {
   var app = angular.module('blackdog', ['ngRoute']);
 
-
   /* Routes */
-  app.config(function($routeProvider, $httpProvider, $locationProvider) {
-
-    // $httpProvider.defaults.useXDomain = true;
-    // $locationProvider.hashPrefix('!');
-    // $locationProvider.html5Mode(true);
-
+  app.config(function($routeProvider) {
     $routeProvider.
       when('/', {
         controller: null,
         template: ''
       }).
       when('/home', {
-        controller: HomeCtrl,
-        templateUrl: './partials/home.html'
+        controller: 'HomeCtrl',
+        templateUrl: 'partials/home.html'
       }).
       when('/bio', {
         controller: null,
-        templateUrl: './partials/bio.html'
+        templateUrl: 'partials/bio.html'
       }).
       when('/dates', {
-        controller: DatesCtrl,
-        templateUrl: './partials/dates.html'
+        controller: 'DatesCtrl',
+        templateUrl: 'partials/dates.html'
       }).
       when('/media', {
-        controller: MediaCtrl,
-        templateUrl: './partials/media.html'
+        controller: 'MediaCtrl',
+        templateUrl: 'partials/media.html'
       }).
       when('/contacts', {
-        controller: ContactCtrl,
-        templateUrl: './partials/contacts.html'
+        controller: null,
+        templateUrl: 'partials/contacts.html'
       }).
       otherwise({
         redirectTo: '/'
       });
+  });
+
+
+  /* Global functions */
+  app.run(function ($rootScope, $location, $window) {
+    $rootScope.menu = {};
+    $rootScope.isActive = function (param) {
+      return ($location.path().substr(1) === param) ? 'active' : '';
+    };
+    $rootScope.$on('$routeChangeStart', function () {
+      $rootScope.menu.show = false;
+    });
+    $rootScope.$on('$viewContentLoaded', function(event) {
+      $window._gaq.push(['_trackPageview', $location.path()]);
+    });
+  });
+
+
+  /* Aux Functions */
+  function getEvents(scope, http, limit) {
+    scope.evLoaded = false;
+
+    var start = moment().format('YYYY-MM-DD') + 'T00:00:00Z';
+    var calId = 's038vh82nnteu7fbj1n4ct9q9o@group.calendar.google.com';
+    var url = 'https://www.googleapis.com/calendar/v3/calendars/' + calId + '/events';
+    var params = {
+      key: 'AIzaSyCMvMWVL7fQ_AOZA7JDPuB6aqEVVBt4yz0',
+      callback: 'JSON_CALLBACK',
+      maxResults: limit || 50,
+      timeMin: start,
+      singleEvents: true,
+      orderBy: 'startTime'
+    };
+
+    // console.log('Events', url, params);
+    
+    http.jsonp(url, { params: params })
+    .success(function (data) {
+      // console.log(data.items);
+      scope.events = [];
+  
+      // Parse Events
+      for(var i = 0; data.items && i < data.items.length; i++) {
+        var ev = data.items[i];
+
+        scope.events.push({
+          title: ev.summary,
+          start: moment(ev.start.dateTime).toDate(),
+          details: ev.location
+        });
+      }
+      scope.evLoaded = true;
+    })
+    .error(function (data, status) {
+      console.log('Error', data, status);
+      scope.evLoaded = true;
+    });
+  }
+
+  function getPhotos(scope, http, limit){
+    scope.phLoaded = false;
+
+    var url = 'http://api.flickr.com/services/feeds/photos_public.gne';
+    var params = {
+      id: '84277882@N05',
+      jsoncallback: 'JSON_CALLBACK',
+      format: 'json'
+    };
+
+    // console.log('Photos', url, params);
+
+    http.jsonp(url, { params: params })
+    .success(function (data) {
+      // console.log(data);
+      scope.photos = [];
+
+      // Show Photos
+      for(var j = 0; j < data.items.length && j < limit; j++) {
+        scope.photos.push(data.items[j]);
+      }
+      scope.phLoaded = true;
+    })
+    .error(function (data, status) {
+      console.log('Error', data, status);
+      scope.phLoaded = true;
+    });
+  }
+
+
+  /* Controllers */
+  app.controller('HomeCtrl', function ($scope, $http) {
+    getEvents($scope, $http, 3);
+    getPhotos($scope, $http, 5);
+  });
+
+  app.controller('DatesCtrl', function ($scope, $http) {
+    getEvents($scope, $http, 35);
+  });
+
+  app.controller('MediaCtrl', function ($scope, $http) {
+    getPhotos($scope, $http, 15);
   });
 
 
@@ -56,147 +151,5 @@
       return months[input.getMonth()];
     };
   });
-
-
-  /* Global functions */
-  app.run(function ($rootScope, $location, $window) {
-    $rootScope.menu = {};
-    $rootScope.isActive = function (param) {
-      return ($location.path().substr(1) === param) ? 'active' : '';
-    };
-    $rootScope.$on('$routeChangeStart', function () {
-      $rootScope.menu.show = false;
-    });
-    $rootScope.$on('$viewContentLoaded', function(event) {
-      $window._gaq.push(['_trackPageview', $location.path()]);
-    });
-  });
-
-
-  /* Controllers */
-  function HomeCtrl($scope, $http, $rootScope) {
-    getEvents($scope, $http, 3, 140);
-    getPhotos($scope, $http, 5);
-    $rootScope.active = 3;
-  }
-
-  function DatesCtrl($scope, $http, $rootScope) {
-    getEvents($scope, $http, 40, 1000);
-    $rootScope.active = 3;
-  }
-
-  function MediaCtrl($scope, $http) {
-    getPhotos($scope, $http, 15);
-  }
-
-  function ContactCtrl($scope, $http) {
-    $scope.sending = false;
-    $scope.contact = {};
-
-    $scope.sendContact = function () {
-      $scope.sending = true;
-      console.log($scope.contact);
-      return;
-
-      var subject = "Novo contacto do site: " + contact.subject;
-      var body = "<b>Nome:</b> " + contact.name + "<br/><b>Email:</b> " +
-        contact.email + "<br/><b>Assunto:</b> " + contact.subject + "<br/><br/>" +
-        contact.message;
-
-      $http.post('http://www.projecto24.com/contacto/enviar/externo/', {
-          subject: subject,
-          from: contact.email,
-          body: body,
-          token: 12572394
-      })
-      .success(function(data) {
-        if( data === '0' ){
-          alert('Message Sent. Thank You.');
-          $scope.contact = {};
-        }
-        else {
-          alert('Message Failed. Please try again later.');
-          $scope.sending = false;
-        }
-      })
-      .error(function (data, status) {
-        alert('Message Failed. Please try again later.');
-        $scope.sending = false;
-      });
-
-      if(!$scope.$$phase) $scope.$apply();
-    };
-  }
-
-  /* Aux Functions */
-  function getEvents(scope, http, results, trim) {
-    scope.evLoaded = false;
-
-    var start = moment().format('YYYY-MM-DD') + 'T00:00:00Z';
-    var calId = 's038vh82nnteu7fbj1n4ct9q9o@group.calendar.google.com';
-    var url = 'https://www.googleapis.com/calendar/v3/calendars/' + calId + '/events';
-    
-    var params = {
-      key: 'AIzaSyCMvMWVL7fQ_AOZA7JDPuB6aqEVVBt4yz0',
-      callback: 'JSON_CALLBACK',
-      maxResults: results || 50,
-      timeMin: start,
-      singleEvents: true,
-      orderBy: 'startTime'
-    };
-
-    // console.log('Events', url, params);
-    
-    http.jsonp(url, {
-      params: params
-    })
-    .success(function (data) {
-      // console.log(data.items);
-      scope.events = [];
-  
-      // Parse Events
-      if(data.items){
-        for(var i = 0; i < data.items.length; i++) {
-          var ev = data.items[i];
-
-          scope.events.push({
-            title: ev.summary,
-            start: moment(ev.start.dateTime).toDate(),
-            details: ev.location
-          });
-        }
-      }
-
-      scope.evLoaded = true;
-    })
-    .error(function (data, status) {
-      console.log('Error', data, status);
-      scope.evLoaded = true;
-    });
-  }
-
-  function getPhotos(scope, http, results){
-    var url = 'http://api.flickr.com/services/feeds/photos_public.gne'+
-      '?format=json&jsoncallback=JSON_CALLBACK&id=84277882@N05';
-
-    // console.log('Photos', url);
-    scope.phLoaded = false;
-
-    http.jsonp(url)
-    .success(function (data) {
-      // console.log(data);
-      // Show Photos
-      scope.photos = [];
-      for(var j = 0; j < data.items.length && j < results; j++) {
-        scope.photos.push(data.items[j]);
-      }
-      scope.phLoaded = true;
-    })
-    .error(function (data, status) {
-      // console.log('Error', data, status);
-      alert('Error ' + status);
-      scope.phLoaded = true;
-    });
-  }
 
 })();
