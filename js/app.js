@@ -1,10 +1,11 @@
 (function() {
   var app = angular.module('blackdog', ['ngRoute']);
 
+
   /* Routes */
   app.config(function($routeProvider, $httpProvider, $locationProvider) {
 
-    $httpProvider.defaults.useXDomain = true;
+    // $httpProvider.defaults.useXDomain = true;
     // $locationProvider.hashPrefix('!');
     // $locationProvider.html5Mode(true);
 
@@ -38,6 +39,7 @@
       });
   });
 
+
   /* Filters */
   app.filter('day', function() {
     return function(input) {
@@ -45,6 +47,7 @@
       return input.getDate();
     };
   });
+
   app.filter('month', function() {
     return function(input) {
       if(!input){ return ''; }
@@ -53,6 +56,7 @@
       return months[input.getMonth()];
     };
   });
+
 
   /* Global functions */
   app.run(function ($rootScope, $location, $window) {
@@ -68,6 +72,7 @@
     });
   });
 
+
   /* Controllers */
   function HomeCtrl($scope, $http, $rootScope) {
     getEvents($scope, $http, 3, 140);
@@ -76,7 +81,7 @@
   }
 
   function DatesCtrl($scope, $http, $rootScope) {
-    getEvents($scope, $http, 25, 1000);
+    getEvents($scope, $http, 40, 1000);
     $rootScope.active = 3;
   }
 
@@ -125,38 +130,43 @@
 
   /* Aux Functions */
   function getEvents(scope, http, results, trim) {
-    var start = moment().format('YYYY-MM-DD');
-    var url = 'https://www.google.com/calendar/feeds/s038vh82nnteu7fbj1n4ct9q9o%40'+
-      'group.calendar.google.com/public/full?alt=jsonc'+
-      '&max-results=1000&start-min=' + start + 'T00:00:00&callback=JSON_CALLBACK';
-
-    // console.log('Events', url);
     scope.evLoaded = false;
 
-    http.jsonp(url)
+    var start = moment().format('YYYY-MM-DD') + 'T00:00:00Z';
+    var calId = 's038vh82nnteu7fbj1n4ct9q9o@group.calendar.google.com';
+    var url = 'https://www.googleapis.com/calendar/v3/calendars/' + calId + '/events';
+    
+    var params = {
+      key: 'AIzaSyCMvMWVL7fQ_AOZA7JDPuB6aqEVVBt4yz0',
+      callback: 'JSON_CALLBACK',
+      maxResults: results || 50,
+      timeMin: start,
+      singleEvents: true,
+      orderBy: 'startTime'
+    };
+
+    console.log('Events', url, params);
+    
+    http.jsonp(url, {
+      params: params
+    })
     .success(function (data) {
-      // console.log(data);
-      var eventsList = [];
+      console.log(data.items);
+      scope.events = [];
+  
       // Parse Events
-      if(data.data.items){
-        for(var i = 0; i < data.data.items.length; i++ ){
-          var event = data.data.items[i];
-          eventsList.push({
-            "title" : event.title,
-            "start" : moment(event.when[0].start).toDate(),
-            "details" : (event.details.length > trim) ? (event.details.substr(0, trim) + '...') : event.details
+      if(data.items){
+        for(var i = 0; i < data.items.length; i++) {
+          var ev = data.items[i];
+
+          scope.events.push({
+            title: ev.summary,
+            start: moment(ev.start.dateTime).toDate(),
+            details: ev.location
           });
         }
       }
-      // Sort Events
-      eventsList.sort(function(a,b) {
-        return a.start - b.start;
-      });
-      // Show Events
-      scope.events = [];
-      for(var j = 0; j < eventsList.length && j < results; j++) {
-        scope.events.push(eventsList[j]);
-      }
+
       scope.evLoaded = true;
     })
     .error(function (data, status) {

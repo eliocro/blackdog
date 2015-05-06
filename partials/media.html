@@ -7,7 +7,7 @@
 	<ul id="flickrGallery">
     <li ng-repeat="photo in photos">
       <a class="flickr-item" href="{{photo.link}}" target="_blank" title="{{photo.title}}">
-        <img src="{{photo.media.m}}" alt="{{photo.title}}"/>
+        <img ng-src="{{photo.media.m}}" alt="{{photo.title}}"/>
       </a>
     </li>
   </ul>
