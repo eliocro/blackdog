@@ -145,13 +145,13 @@
       orderBy: 'startTime'
     };
 
-    console.log('Events', url, params);
+    // console.log('Events', url, params);
     
     http.jsonp(url, {
       params: params
     })
     .success(function (data) {
-      console.log(data.items);
+      // console.log(data.items);
       scope.events = [];
   
       // Parse Events
@@ -171,7 +171,6 @@
     })
     .error(function (data, status) {
       console.log('Error', data, status);
-      // alert('Error ' + status);
       scope.evLoaded = true;
     });
   }
