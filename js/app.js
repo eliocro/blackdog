@@ -93,7 +93,7 @@
   function getPhotos(scope, http, limit){
     scope.phLoaded = false;
 
-    var url = 'http://api.flickr.com/services/feeds/photos_public.gne';
+    var url = 'https://api.flickr.com/services/feeds/photos_public.gne';
     var params = {
       id: '84277882@N05',
       jsoncallback: 'JSON_CALLBACK',
