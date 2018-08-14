@@ -66,19 +66,19 @@
     };
 
     // console.log('Events', url, params);
-    
     http.jsonp(url, { params: params })
     .success(function (data) {
-      // console.log(data.items);
+      // console.log('Items', data.items);
       scope.events = [];
-  
+
       // Parse Events
       for(var i = 0; data.items && i < data.items.length; i++) {
         var ev = data.items[i];
+        var start = ev.start.dateTime || ev.start.date;
 
         scope.events.push({
           title: ev.summary,
-          start: moment(ev.start.dateTime).toDate(),
+          start: moment(start).toDate(),
           details: ev.location
         });
       }
