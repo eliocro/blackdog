@@ -57,7 +57,7 @@
     var calId = 's038vh82nnteu7fbj1n4ct9q9o@group.calendar.google.com';
     var url = 'https://www.googleapis.com/calendar/v3/calendars/' + calId + '/events';
     var params = {
-      key: 'AIzaSyCMvMWVL7fQ_AOZA7JDPuB6aqEVVBt4yz0',
+      key: 'AIzaSyBt8JPf6F3yMIOvWOF1BBqnRQum8rnP0CA',
       callback: 'JSON_CALLBACK',
       maxResults: limit || 50,
       timeMin: start,
